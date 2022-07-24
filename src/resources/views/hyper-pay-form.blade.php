@@ -13,7 +13,7 @@
         </div>
     @endif
 
-    <div @if (Config::get('app.locale') == 'ar') class="arabic-card @if (session('alert')) hidden @endif" @endif>
+    <div  class="@if (Config::get('app.locale') == 'ar') arabic-card @endif @if (session('alert')) hidden @endif" >
         <div class="brands-container">
             @foreach($config['gatewayes'] ?? [] as $key => $gateway)
                 <label class="hy_btn-container ">
