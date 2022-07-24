@@ -1,0 +1,20 @@
+{
+    "name": "hyperpay/payment",
+    "autoload": {
+        "psr-4": {
+            "Hyperpay\\Payment\\": "src/"
+        }
+    },
+    "authors": [{
+        "name": "ahmada3mar",
+        "email": "ahmad.aimer@hyperpay.com"
+    }],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hyperpay\\Payment\\HyperpayServiceProvider"
+            ]
+        }
+    },
+    "require": {}
+}
