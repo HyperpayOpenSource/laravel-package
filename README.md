@@ -1,3 +1,4 @@
+
 <p  align="center"><a  href="https://hyperpay.com"  target="_blank">
 <img src="https://www.hyperpay.com/wp-content/uploads/2020/04/cropped-011-300x155.png"  width="400"> 
 </a></p>
@@ -37,17 +38,12 @@ Copy and pay  package for Laravel >= 7
 
 * [Installation ](#installation)
 
-* [Add a new payment](#add-a-new-payment)
+* [Basic Use](#basic-use)
 
-* [Properties](#properties)
+* [customization](#customization)
 
-* [Methods](#methods)
+* [Handel Result](#handel-result)
 
-* [customize Admin setting fields](#customize-admin-setting-fields)
-
-* [JavaScript & CSS](#customize-admin-setting-fields)(#javascript-and-css)
-
-  
   
   
 
@@ -74,28 +70,28 @@ project
 ```php
 return [
 
-	"environment"  =>  "test",
-	  
-	"gatewayes"  => [
-		"card"  => [
-			"enabled"  =>  false,
-			'entity_id'  =>  "",
-			"access_token"  =>  "",
-			"currency"  =>  "SAR",
-			"transaction_type"  =>  "DB",
-			"brands"  =>  "VISA MASTER AMEX",
-			"label"  =>  "Cridet Card",
+"environment"  =>  "test",
+  
+"gatewayes"  => [
+	"card"  => [
+		"enabled"  =>  false,
+		'entity_id'  =>  "",
+		"access_token"  =>  "",
+		"currency"  =>  "SAR",
+		"transaction_type"  =>  "DB",
+		"brands"  =>  "VISA MASTER AMEX",
+		"label"  =>  "Cridet Card",
+	],
+	"mada"  => [
+		"enabled"  =>  false,
+		'entity_id'  =>  "",
+		"access_token"  =>  "",
+		"currency"  =>  "SAR",
+		"transaction_type"  =>  "DB",
+		"brands"  =>  "MADA",
+		"label"  =>  "Mada Debit Card",
 		],
-		"mada"  => [
-			"enabled"  =>  false,
-			'entity_id'  =>  "",
-			"access_token"  =>  "",
-			"currency"  =>  "SAR",
-			"transaction_type"  =>  "DB",
-			"brands"  =>  "MADA",
-			"label"  =>  "Mada Debit Card",
-			],
-		]
+	]
 	];
 ```
 Fill **entity_id** and **access_token**  with credential you provided with
@@ -118,7 +114,7 @@ By default all payment methods are disabled , to enable payment method just chan
 
 ```
 
-### Basic Use 
+## Basic Use 
 
 Inside any blade template you can call payment component 
 
@@ -144,7 +140,7 @@ Inside any blade template you can call payment component
 ```
  
 
-### customization
+## customization
 
 ```php
 ...
