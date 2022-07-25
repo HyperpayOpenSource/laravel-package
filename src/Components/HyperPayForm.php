@@ -31,9 +31,9 @@ class HyperPayForm extends Component
         $this->zip = $zip;
         $this->shipping_cost = $shipping_cost;
         $this->config = config('payments');
-        $this->config['gatewayes'] = Arr::where( $this->config['gatewayes'], function ($value) {
+        $this->config['gatewayes'] = ($this->config && array_key_exists('gatewayes' ,$this->config)) ? Arr::where( $this->config['gatewayes'], function ($value) {
             return ($value['enabled'] ?? null) == true;
-        });;
+        }) : [];
     }
 
     /**

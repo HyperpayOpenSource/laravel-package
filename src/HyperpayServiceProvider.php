@@ -35,6 +35,9 @@ class HyperpayServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/resources/css' => public_path('hyperpay'),
         ], 'config');
+        $this->publishes([
+            __DIR__.'/Controllers/PaymentController.php' => app_path('Http/Controllers/PaymentController.php'),
+        ], 'config');
 
 
     }
