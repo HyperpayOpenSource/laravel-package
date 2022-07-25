@@ -27,7 +27,7 @@ class MainController extends Controller
         if($success){
             return $this->success($response);
         }else{
-            return $this->faild($response);
+            return $this->failed($response);
         }
     }
 
@@ -36,7 +36,7 @@ class MainController extends Controller
         return $result;
     }
 
-    public function faild($result)
+    public function failed($result)
     {
         Session::flash('alert' , $result['result']['description']);
         return back();

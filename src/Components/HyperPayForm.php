@@ -19,7 +19,7 @@ class HyperPayForm extends Component
      */
     public function __construct($amount, $merchantTransactionId, $firstName = "", $lastName = "", $email = "", $street = "", $city = "", $state = "", $country = "", $zip = "", $shipping_cost = "")
     {
-        $this->amount = $amount;
+        $this->amount = number_format($amount, 2, '.', '');
         $this->merchantTransactionId = $merchantTransactionId;
         $this->firstName = $firstName;
         $this->lastName = $lastName;
