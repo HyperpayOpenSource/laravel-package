@@ -1,4 +1,3 @@
-
 <p  align="center"><a  href="https://hyperpay.com"  target="_blank">
 <img src="https://www.hyperpay.com/wp-content/uploads/2020/04/cropped-011-300x155.png"  width="400"> 
 </a></p>
@@ -78,25 +77,25 @@ return [
 	"environment"  =>  "test",
 	  
 	"gatewayes"  => [
-			"card"  => [
-					"enabled"  =>  false,
-					'entity_id'  =>  "",
-					"access_token"  =>  "",
-					"currency"  =>  "SAR",
-					"transaction_type"  =>  "DB",
-					"brands"  =>  "VISA MASTER AMEX",
-					"label"  =>  "Cridet Card",
+		"card"  => [
+			"enabled"  =>  false,
+			'entity_id'  =>  "",
+			"access_token"  =>  "",
+			"currency"  =>  "SAR",
+			"transaction_type"  =>  "DB",
+			"brands"  =>  "VISA MASTER AMEX",
+			"label"  =>  "Cridet Card",
+		],
+		"mada"  => [
+			"enabled"  =>  false,
+			'entity_id'  =>  "",
+			"access_token"  =>  "",
+			"currency"  =>  "SAR",
+			"transaction_type"  =>  "DB",
+			"brands"  =>  "MADA",
+			"label"  =>  "Mada Debit Card",
 			],
-			"mada"  => [
-					"enabled"  =>  false,
-					'entity_id'  =>  "",
-					"access_token"  =>  "",
-					"currency"  =>  "SAR",
-					"transaction_type"  =>  "DB",
-					"brands"  =>  "MADA",
-					"label"  =>  "Mada Debit Card",
-					],
-			]
+		]
 	];
 ```
 Fill **entity_id** and **access_token**  with credential you provided with
