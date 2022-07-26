@@ -17,7 +17,7 @@ class HyperPayForm extends Component
      *
      * @return void
      */
-    public function __construct($amount, $merchantTransactionId, $firstName = "", $lastName = "", $email = "", $street = "", $city = "", $state = "", $country = "", $zip = "", $shipping_cost = "")
+    public function __construct($amount, $merchantTransactionId, $firstName = "", $lastName = "", $email = "", $street = "", $city = "", $state = "", $country = "", $zip = "")
     {
         $this->amount = number_format($amount, 2, '.', '');
         $this->merchantTransactionId = $merchantTransactionId;
@@ -29,7 +29,6 @@ class HyperPayForm extends Component
         $this->state = $state;
         $this->country = $country;
         $this->zip = $zip;
-        $this->shipping_cost = $shipping_cost;
         $this->config = config('payments');
         $this->config['gatewayes'] = ($this->config && array_key_exists('gatewayes' ,$this->config)) ? Arr::where( $this->config['gatewayes'], function ($value) {
             return ($value['enabled'] ?? null) == true;
@@ -77,7 +76,6 @@ class HyperPayForm extends Component
             "shipping.city" => $this->city,
             "shipping.state" => $this->state,
             "shipping.country" => $this->country,
-            "shipping.cost" => $this->shipping_cost,
         ];
 
         // to remove empty data from array
