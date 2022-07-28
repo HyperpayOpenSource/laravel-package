@@ -118,9 +118,13 @@
     display: flex;
     gap: 10px;
     margin-bottom: 5px;
-    justify-content: space-between;
+    justify-content: left;
     width: 100%;
     padding: 5px
+}
+
+.arabic-card .brands-container{
+    justify-content: right;
 }
 
 .hy_btn-container {
@@ -178,7 +182,7 @@
     margin: unset
 }
 
-.arabic-card>#hyperpay_forms_container.brand-mada .wpwl-group-brand,
+#hyperpay_forms_container.brand-mada .wpwl-group-brand,
 .wpwl-brand.wpwl-brand-MADA.wpwl-brand-card {
     display: none
 }

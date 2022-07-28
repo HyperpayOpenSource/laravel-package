@@ -38,5 +38,11 @@
     var locale = "{{ Config::get('app.locale') }}";
     var paymentWidgets = "{{ $paymentWidgets }}";
     var postBack_URL = "{{ URL::to('/hyperpay/payment') }}";
+
+    $('.btn-reload').on('click', function() {
+        $('.hidden').removeClass('hidden');
+        $('.btn-reload').remove()
+    })
+
 </script>
 <script src="/hyperpay/script.js"></script>
